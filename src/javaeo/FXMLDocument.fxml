@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="279.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaeo.FXMLDocumentController">
+   <children>
+      <Accordion layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <panes>
+          <TitledPane animated="false" prefHeight="173.0" prefWidth="583.0" text="Key generator">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="209.0" prefWidth="622.0">
+                     <children>
+                        <TextField fx:id="txtKeySize" layoutX="14.0" layoutY="23.0" promptText="key size" text="1024" AnchorPane.leftAnchor="8.0" />
+                        <ComboBox fx:id="cbEncType" layoutX="14.0" layoutY="55.0" prefWidth="150.0" promptText="Encryption type" AnchorPane.leftAnchor="8.0" />
+                        <Label layoutX="14.0" layoutY="6.0" text="Key size" AnchorPane.leftAnchor="8.0" />
+                        <Label fx:id="lblFolder" layoutX="19.0" layoutY="108.0" prefHeight="17.0" prefWidth="115.0" text="C:\..\.." textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="8.0" />
+                        <Button fx:id="btnBrowse" layoutX="141.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleBrowseAction" text="..." />
+                        <Label layoutX="18.0" layoutY="87.0" text="Output folder" AnchorPane.leftAnchor="8.0" />
+                        <Button layoutX="14.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleCreateAction" prefHeight="25.0" prefWidth="154.0" text="Create" AnchorPane.leftAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Key signer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtSigner" layoutX="24.0" layoutY="25.0" promptText="M W Zwolsman" text="M W Zwolsman" AnchorPane.leftAnchor="8.0" />
+                        <Label layoutX="18.0" layoutY="57.0" text="Key path" AnchorPane.leftAnchor="8.0" />
+                        <Label fx:id="lblKeyPath" layoutX="27.6" layoutY="74.0" prefHeight="17.0" prefWidth="112.0" text="&lt;none&gt;" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="18.0" />
+                        <Label layoutX="24.0" layoutY="6.0" text="Signer" AnchorPane.leftAnchor="8.0" />
+                        <Label fx:id="lblFilePath" layoutX="27.6" layoutY="114.0" prefHeight="17.0" prefWidth="109.0" text="&lt;none&gt;" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="18.0" />
+                        <Label layoutX="15.0" layoutY="97.0" text="File" AnchorPane.leftAnchor="8.0" />
+                        <Button layoutX="143.0" layoutY="70.0" mnemonicParsing="false" onAction="#handleBrowseKeyAction" text="..." />
+                        <Button layoutX="143.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleBrowseFileAction" text="..." />
+                        <Button layoutX="16.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleSignAction" prefHeight="25.0" prefWidth="153.0" text="Sign" />
+                        <ComboBox fx:id="cbSignType" layoutX="18.0" layoutY="138.0" prefWidth="150.0" promptText="Sign type" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Signature validator">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="142.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleBrowseKeyAction" prefHeight="25.0" prefWidth="15.0" text="..." />
+                        <Label fx:id="lblFilePath1" layoutX="23.0" layoutY="32.0" prefHeight="17.0" prefWidth="109.0" text="&lt;none&gt;" textOverrun="CENTER_ELLIPSIS" />
+                        <ComboBox fx:id="cbVerifyType" layoutX="22.0" layoutY="102.0" prefWidth="150.0" promptText="Sign type" />
+                        <Button layoutX="21.0" layoutY="134.0" mnemonicParsing="false" onAction="#handleVerifyAction" prefHeight="25.0" prefWidth="153.0" text="Verify" />
+                        <Button layoutX="142.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleBrowseFileAction" text="..." />
+                        <Label layoutX="23.0" layoutY="20.0" prefHeight="16.0" prefWidth="54.0" text="Key path" />
+                        <Label fx:id="lblKeyPath1" layoutX="21.0" layoutY="77.0" prefHeight="17.0" prefWidth="112.0" text="&lt;none&gt;" textOverrun="CENTER_ELLIPSIS" />
+                        <Label layoutX="21.0" layoutY="56.0" text="File" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>
